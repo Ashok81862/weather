@@ -1,0 +1,25 @@
+.search{
+    text-align: center;
+}
+.search input[type=text] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #000;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+button {
+    background-color: crimson;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
