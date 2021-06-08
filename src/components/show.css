@@ -1,0 +1,14 @@
+.weather{
+    margin: 10px 0;
+    background:#fff;
+    padding: 10px 0;
+
+}
+
+.list{
+    list-style: none;
+}
+
+li{
+  font-size: 18px;  
+}
