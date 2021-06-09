@@ -1,23 +1,27 @@
 .search{
     text-align: center;
+    margin: 0 auto;
+    min-width: none;
 }
 .search input[type=text] {
     width:auto;
-    padding: 6px;
+    padding: auto;
     border: 1px solid #000;
-    margin-top: 8px;
-    margin-right: 16px;
+    margin: 8px auto;
     font-size: 17px;
+    display: block;
 }
 
 button {
+    display:block;
     background-color: crimson;
     color: white;
-    font-size: 15px;
-    padding: 10px 20px;
+    font-size: 13px;
+    padding: 8px 20px;
     margin: 10px 0px;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 
 button:focus{

@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  width: 50%;
+  width:500px;
   height: 100%;
   background-color:cadetblue;
 }
 h3{
   font-size: 28px;
   font-weight: bold;
-  color: brown;
+  color: #fff
 }

@@ -1,14 +1,22 @@
 .weather{
-    margin: 10px 0;
-    background:#fff;
-    padding: 10px 0;
-
+    margin: auto;
+    background:rgb(247, 244, 244);
+    width: auto;
+}
+ul {
+  background: #FF888E;
+  padding: 25px;
+  list-style: none;
+}
+ul li {
+  margin: 25px;
+  color: #FFFFFF;
+  font-size: 18px;
 }
 
-.list{
-    list-style: none;
+.error {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: capitalize;
 }
 
-li{
-  font-size: 18px;  
-}

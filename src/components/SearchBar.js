@@ -5,16 +5,29 @@ import Show from './Show'
 function SearchBar() {
     const [country, setCountry] = useState();
     const [place, setPlace] = useState();
+
+    const [weather, setWeather] = useState("");
     
-    const  handle = async() => {
-        const api = "429736441cf3572838aa10530929f7cd"
-        const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place},${country}&appid=${api}`).then(response => response.json()).then((data) => {
+    const search = async() => {
+        const countryName = country
+        const placeName = place
+
+        if(!(countryName && placeName)){
+            alert('Please fill the inputs')
+        }
+        else{
+            const api = "429736441cf3572838aa10530929f7cd"
+            const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place},${country}&appid=${api}`).then(response => response.json()).then((data) => data)
             console.log(data)
-        })
+            setWeather({data:data})
+        }
     }
 
-    
-
+    const clearSearch = () => {
+        setCountry("");
+        setPlace("");
+        setWeather("");
+    }
     return (
         <div>
             <div className="search">
@@ -24,9 +37,10 @@ function SearchBar() {
                 <input type="text" placeholder="Place" value={place}
                     onChange={(event) => setPlace(event.target.value)}
                 />
-                <button onClick={handle}>Search Location</button>
+                <button onClick={search}>Search Location</button>
+                <button onClick={clearSearch}>Clear Search</button>
             </div>
-            <Show />
+            {weather && <Show data={weather.data}/>}
         </div>
     )
 }
